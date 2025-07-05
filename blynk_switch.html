@@ -1,0 +1,43 @@
+<script>
+  const authToken = "4NWQMjLVnPeKrnnzfp4olZ9zobz_uOP";
+  const vPin = 0;
+
+  document.getElementById("onBtn").addEventListener("click", function() {
+    fetch("https://blynk.cloud/external/api/update?token=" + authToken + "&v" + vPin + "=1")
+      .then(res => {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        alert("ON sent!");
+      })
+      .catch(err => alert("Error: " + err));
+  });
+
+  document.getElementById("offBtn").addEventListener("click", function() {
+    fetch("https://blynk.cloud/external/api/update?token=" + authToken + "&v" + vPin + "=0")
+      .then(res => {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        alert("OFF sent!");
+      })
+      .catch(err => alert("Error: " + err));
+  });
+</script><script>
+  const authToken = "4NWQMjLVnPeKrnnzfp4olZ9zobz_uOP";
+  const vPin = 0;
+
+  document.getElementById("onBtn").addEventListener("click", function() {
+    fetch("https://blynk.cloud/external/api/update?token=" + authToken + "&v" + vPin + "=1")
+      .then(res => {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        alert("ON sent!");
+      })
+      .catch(err => alert("Error: " + err));
+  });
+
+  document.getElementById("offBtn").addEventListener("click", function() {
+    fetch("https://blynk.cloud/external/api/update?token=" + authToken + "&v" + vPin + "=0")
+      .then(res => {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        alert("OFF sent!");
+      })
+      .catch(err => alert("Error: " + err));
+  });
+</script>
